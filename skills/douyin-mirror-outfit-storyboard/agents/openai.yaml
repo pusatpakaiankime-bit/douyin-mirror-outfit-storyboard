@@ -1,0 +1,6 @@
+interface:
+  display_name: "马来女装镜前穿搭"
+  short_description: "锁定商品并自动完成马来穿搭、镜前模特图、分镜与视频提示词。"
+  default_prompt: "Use $douyin-mirror-outfit-storyboard to style this product as a Malaysian fashion look and create a mirror-selfie model image, storyboard, and video prompt."
+policy:
+  allow_implicit_invocation: true
