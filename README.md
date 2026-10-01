@@ -9,10 +9,12 @@ An installable Codex skill for Malaysian women’s fashion mirror-selfie imagery
 - 严格锁定上传商品的颜色、版型、图案、长度、剪裁与可见设计细节。
 - 严格锁定成年模特身份；分镜中保持同一人物、同一商品与同一搭配。
 - 自动补齐现代马来西亚女性穿搭；默认不添加包包。
+- 默认使用真实住宅式背景：允许轻微生活痕迹、自然不对称和普通光线，避免样板房与过度完美的 AI 室内。
 - 识别 Hijab、Tudung 或端庄造型后启用端庄搭配约束。
 - 输出 9:16 镜前自拍图、10 镜头分镜、10 秒动作表、Seedance 2.0 中文提示词和 OmniFlash 英文提示词。
 - Strict product and adult-model identity locking across images and shots.
 - Malaysian styling with conditional modest/Hijab handling and no bag by default.
+- Real lived-in home backgrounds by default—natural imperfections, ordinary light, and no showroom-perfect CGI interior.
 
 ## 仓库内容 / Repository contents
 
@@ -54,7 +56,7 @@ Copy both folders into `%USERPROFILE%\.codex\skills\`, preserving their names, t
 使用 $douyin-mirror-outfit-storyboard 完成完整流程。
 严格按照我上传的 @产品图 和 @模特图 生成；如果上传了 @背景图，也严格按照背景图。
 生成 9:16 全身镜前自拍模特图、10 镜头分镜图、10 秒中文动作表、Seedance 2.0 中文视频提示词和 OmniFlash 英文视频提示词。
-严格锁定商品与同一位成年模特；按照现代马来西亚女性时尚补齐缺失单品；默认不要包包。
+严格锁定商品与同一位成年模特；按照现代马来西亚女性时尚补齐缺失单品；默认不要包包。背景保持真实住宅感，允许轻微生活痕迹和自然不对称，不要样板房、豪宅展厅或过度完美的 AI 场景。
 ```
 
 English command:
@@ -63,7 +65,7 @@ English command:
 Use $douyin-mirror-outfit-storyboard and complete the full workflow.
 Follow my uploaded @product image and @adult model image exactly; if an @background image is supplied, follow it as well.
 Create a 9:16 full-body mirror-selfie model image, a 10-shot storyboard, a 10-second Chinese action plan, a Seedance 2.0 Chinese video prompt, and an OmniFlash English video prompt.
-Strictly preserve the product and the same adult model identity. Complete missing items in contemporary Malaysian women’s fashion. Do not add a bag by default.
+Strictly preserve the product and the same adult model identity. Complete missing items in contemporary Malaysian women’s fashion. Do not add a bag by default. Keep the background believable and lived-in, with mild everyday traces and natural asymmetry; avoid showroom-perfect or obviously AI-generated interiors.
 ```
 
 ## 仅生成视频提示词 / Video prompt only

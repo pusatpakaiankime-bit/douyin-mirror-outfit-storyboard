@@ -6,12 +6,13 @@
 
 Position the visual as Douyin-style refined mirror outfit content:
 
-- Mood: sweet but adult, fresh, delicate, refined, warm, clean, lightly luxurious.
-- Scene: upscale dressing room, tidy bedroom mirror area, walk-in closet, or vanity corner.
+- Mood: sweet but adult, fresh, refined, warm, natural, and credible rather than luxurious or staged.
+- Scene: an ordinary lived-in bedroom, dressing corner, wardrobe area, or home mirror location that plausibly supports a phone selfie.
 - Camera: vertical 9:16, full-body mirror selfie, phone partly covering the face, camera around chest-to-face height.
 - Lighting: warm indoor ceiling light plus soft ambient fill, gentle shadows, low contrast.
 - Filter: creamy pastel, warm gray-nude, low saturation, clean skin tone, no heavy HDR.
-- Background: cream wall, dark glass wardrobe, slim black vanity table, small cosmetics, flowers, gray stone floor, pale sofa edge.
+- Background: visually quiet but not perfect; preserve slight asymmetry, realistic object placement, ordinary home materials, small wear, imperfect curtain or bedding folds, subtle mirror marks/reflections, and normal ambient light. Use only a few secondary objects and keep the product readable.
+- Avoid: luxury showroom, hotel-suite perfection, spotless CGI materials, perfect symmetry, excessive decorative flowers, huge empty rooms, dramatic ceiling strips, over-polished reflective floors, or an obviously AI-generated interior.
 
 ## Model Direction
 
@@ -35,7 +36,7 @@ Input image: strict apparel reference. Preserve the outfit and accessory identit
 Primary request: Create a full-body adult female model wearing the same outfit combination in a refined Douyin mirror-selfie fashion style.
 Subject: young adult female model, sweet but adult, fresh natural presence, clean light makeup, elegant relaxed body language, taking a full-body mirror selfie with a phone partly covering the face. Describe softly styled hair only when it is actually uncovered; when headwear is present preserve its actual wrap and covered areas under the resolved COVERAGE_TARGET.
 Outfit invariants: <list every garment and accessory from the product image, including colors, patterns, closures, silhouette, shoes, bag, scarf, watch, jewelry>.
-Scene/backdrop: realistic upscale dressing room / tidy bedroom mirror area; cream wall, dark glass wardrobe, slim vanity table with small cosmetics, soft flower arrangement, warm recessed ceiling light, polished gray stone floor, pale sofa edge.
+Scene/backdrop: believable ordinary lived-in bedroom or home dressing corner; natural asymmetry, a few casually placed everyday objects, slightly imperfect fabric folds, subtle mirror/floor reflections, ordinary materials with minor wear, and normal mixed daylight/room light. Tidy enough to see the outfit, but not showroom-perfect or luxurious. If a background reference exists, preserve its real layout and imperfections without beautifying it.
 Composition/framing: vertical 9:16, full-body mirror selfie, model centered, entire outfit visible from head to shoes, no cropping of shoes or head. No bag unless explicitly requested or supplied as a reference.
 Lighting/mood: warm soft indoor light, low-contrast gentle shadows, mild creamy pastel filter.
 Constraints: adult model only; no underage appearance; no readable text, logos, watermarks, distorted hands, warped shoes, changed colors, hidden key garments, extra unrelated props, anime style, heavy glam makeup, or outdoor scenery.
@@ -52,7 +53,7 @@ Format: one clean contact sheet containing 10 numbered vertical 9:16 panels, arr
 
 Keep constant: the same adult model, same hairstyle and makeup direction, same outfit and accessories from the product image. Preserve exact colors, silhouettes, bag type, shoe type, scarf/patterns, and styling.
 
-Scene family: realistic upscale dressing room / tidy bedroom mirror area with warm cream wall, dark glass wardrobe, vanity table, flowers, warm ceiling light, gray stone floor, and pale sofa edge.
+Scene family: believable ordinary lived-in bedroom or home mirror corner. Keep the same real layout, slight asymmetry, small everyday traces, imperfect folds/reflections, and normal mixed light across all panels; never upgrade it into a showroom, luxury closet, or spotless CGI interior.
 
 Panel sequence:
 01 opening full-body mirror hero pose, model centered, entire outfit visible, phone partly covering face.
@@ -66,7 +67,7 @@ Panel sequence:
 09 texture close-up frame, sleeve/cuff/fabric/pattern/watch/accessory detail visible.
 10 final full-body hero pose, model centered, product-video cover feeling.
 
-Visual style: photorealistic, warm soft indoor lighting, low-contrast creamy pastel filter, realistic fabric texture, natural body proportions, polished social-commerce visual.
+Visual style: photorealistic phone-camera realism, normal soft indoor/daylight mix, gentle low contrast, realistic fabric texture and body proportions, mild sensor grain and restrained processing; commercially usable but not over-polished.
 
 Constraints: adult model only; no underage appearance; no bag unless explicitly requested or supplied; no anime or illustration style; no distorted hands, warped shoes, changed garment colors, hidden shoes, extra unrelated props, readable text besides panel numbers, watermark, logo, or heavy glam makeup.
 ```

@@ -33,9 +33,10 @@ Read `references/malaysian-styling.md` whenever selecting or coordinating garmen
    - Always cast an adult model.
 
 4. Choose the most fitting real scene.
-   - Default scene: upscale dressing room / tidy bedroom mirror area.
-   - Use the product's colors to tune the background: warm cream wall, dark glass wardrobe, vanity table, flowers, soft sofa edge, polished gray floor, warm ceiling light.
-   - Keep the scene uncluttered and product-centered.
+   - Default scene: a believable, ordinary lived-in bedroom, dressing corner, or home mirror area suitable for a real phone selfie.
+   - Prefer natural asymmetry and restrained everyday traces: a slightly imperfect curtain fold, one or two casually placed objects, mild floor or mirror reflections, small material wear, and normal mixed daylight/room light.
+   - Keep it tidy enough for product visibility but not showroom-perfect. Avoid luxury-display styling, flawless symmetry, excessive flowers or decor, spotless CGI surfaces, unrealistically polished floors, dramatic architectural lighting, and empty AI-looking rooms.
+   - If `@背景图` is supplied, preserve its actual layout, furniture, materials, imperfections, lighting, and lived-in level; do not beautify it into a more luxurious space.
 
 5. Generate the model image when requested.
    - Use the image generation tool with the product image as a strict reference.
