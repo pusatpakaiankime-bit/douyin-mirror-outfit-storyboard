@@ -53,12 +53,24 @@ Read `references/malaysian-styling.md` whenever selecting or coordinating garmen
    - Never attribute room details to `@人物图` when a separate `@背景图` is supplied.
    - State reference priority: product fidelity, person identity, background continuity, then storyboard motion/composition.
    - Match the requested duration; for a 10-second, 10-shot plan, default to one second per shot.
-   - For OmniFlash, provide the same locks and timeline in English.
+   - For OmniFlash, provide the same locks and timeline in concise English, following the format below.
 
 8. Return concise deliverables.
    - For model image: provide the image/path and a brief style note.
    - For storyboard: provide the contact sheet/path plus a table of action prompts.
    - Include enough prompt text for reuse, but keep the final response practical and not overly long.
+
+## OmniFlash Prompt Format
+
+- Output one complete, directly copyable English prompt. Start with duration, aspect ratio and visual intent, then a short `REFERENCE ROLES` block.
+- In that block only, mention each supplied image once using its actual attachment label, such as `@图片1`. Follow the current upload order; never reuse numbering from a previous task or invent an absent reference. These labels must correspond to actual platform attachments, not be presented as a universal OmniFlash binding syntax.
+- After the reference block, use plain descriptions such as “the original product photo”, “the portrait”, “the model image” and “the storyboard”. Do not repeat @ tags throughout the action timeline.
+- Assign roles from the actual inputs: portrait for identity and hijab; original product images for apparel; model image for supporting outfit, composition and, when no separate background exists, the room; storyboard for shot order and framing only.
+- State conflict priority briefly: original product references override generated garment details; the original portrait overrides generated faces; a supplied background reference overrides generated room details. A model image with known mismatches is a composition reference, not an exact start frame. Do not claim a prompt guarantees perfect identity or product preservation.
+- Use short natural-language paragraphs covering confirmed garment details, fixed supporting outfit, applicable hijab/coverage, sleeve endpoints, concrete hand placement, room and camera. Preserve the shared clothing constraints without repetitive prohibition lists or unsupported material/function claims.
+- Give a compact chronological action sequence matching the requested duration. For a requested 10-second, 10-shot video, use ten lines from `0–1s` through `9–10s`. Each line gives one feasible action and useful framing, emphasizing the actual hero product.
+- End with the requested audio treatment and one concise continuity/avoidance paragraph. Preserve the no-bag default and user-specified no-text/no-watermark rules. Do not add dialogue, music, API explanations or platform tutorials unless requested.
+- This concise, single-mention reference format is the user's preferred OmniFlash format. Do not mechanically copy the more repetitive Seedance reference style into it.
 
 ## Product Fidelity Rules
 
@@ -92,3 +104,13 @@ For action prompts, use a table with:
 `镜头 | 时长 | 画面 | 动作提示词 | 镜头/构图 | 产品重点`
 
 Keep each action prompt executable: describe body movement, hand placement, gaze/phone position, product focus, and what must remain visible.
+
+## Release and delivery review — v3.2.0 (2026-10-04)
+
+- When a complete package including TikTok copy is requested, include Hook angle, TITLE, CAPTION and relevant hashtags as separate text. Use the requested language; do not guarantee virality or invent product claims.
+- Review the generated model image against original references before using it for the storyboard. Review every storyboard panel. Allow up to two targeted repair rounds per asset; if material mismatches remain, mark it as a draft and report the unresolved details rather than treating it as an approved reference.
+- The user's no-text requirement also excludes panel numbers; map unnumbered panels to the external action table in reading order.
+- Resolve incidental styling separately from the hero product: a bag visible incidentally in a garment photo does not override an explicit no-bag request.
+- A portrait cannot establish unseen body proportions. Disclose missing evidence rather than claim exact reconstruction.
+- Delivering video prompts does not mean a video has been generated. Actual rendering and publication require the corresponding user request and service.
+- Every repository update must increment VERSION and update CHANGELOG with date and changes. Preserve prior commits and named release packages.

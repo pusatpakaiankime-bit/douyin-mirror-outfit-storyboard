@@ -1,109 +1,79 @@
-# Douyin Mirror Outfit Storyboard
+# 镜前穿搭，从你的参考图开始
+# Your references. One consistent outfit story.
 
-一套面向现代马来西亚女性穿搭的 Codex Skill：从服装商品图与成年模特参考图生成镜前自拍模特图、连续分镜，以及 Seedance 2.0 / OmniFlash 视频提示词。
+欢迎！把商品、成年模特和场景交给这个 Skill，我们一起把穿搭想法整理成可检查、可复用的图片与视频创作素材。你不需要先学会复杂提示词：从下面的一句话开始就好。
 
-An installable Codex skill for Malaysian women’s fashion mirror-selfie imagery, storyboards, and Seedance 2.0 / OmniFlash video prompts.
+Welcome! Bring your product, adult-model and room references. This skill helps turn them into reviewable fashion images, storyboards and reusable video prompts. Start with one simple request—no elaborate prompt writing required.
 
-## 功能 / Features
+**v3.2.0 · 2026-10-04 · 中文 / English**
 
-- 严格锁定上传商品的颜色、版型、图案、长度、剪裁与可见设计细节。
-- 严格锁定成年模特身份；分镜中保持同一人物、同一商品与同一搭配。
-- 自动补齐现代马来西亚女性穿搭；默认不添加包包。
-- 默认使用真实住宅式背景：允许轻微生活痕迹、自然不对称和普通光线，避免样板房与过度完美的 AI 室内。
-- 识别 Hijab、Tudung 或端庄造型后启用端庄搭配约束。
-- 输出 9:16 镜前自拍图、10 镜头分镜、10 秒动作表、Seedance 2.0 中文提示词和 OmniFlash 英文提示词。
-- Strict product and adult-model identity locking across images and shots.
-- Malaysian styling with conditional modest/Hijab handling and no bag by default.
-- Real lived-in home backgrounds by default—natural imperfections, ordinary light, and no showroom-perfect CGI interior.
+[开始使用 / Start here](docs/quick-start.md) · [完整教程 / Full tutorial](docs/tutorial.md) · [流程图 / Flowchart](docs/workflow.md) · [提示词 / Prompts](docs/prompts.md) · [版本记录 / Changelog](CHANGELOG.md)
 
-## 仓库内容 / Repository contents
+> 商品图管商品，人物图管身份，背景图管空间。生成结果需要检查，不承诺百分百保真。  
+> Product references control clothing, portraits control identity, and background references control the room. Generated results need review; exact fidelity is not guaranteed.
 
-- `skills/douyin-mirror-outfit-storyboard/` — Skill 主体 / main skill
-- `skills/_shared/` — 必需的共用约束 / required shared constraints
-- `install.ps1` — Windows 一键安装 / one-click Windows installer
-- `docs/index.html` — 可离线打开的中英双语教程 / offline bilingual guide
-- `examples/` — 生成效果示例，不含用户原始素材 / generated examples only
-- `release/` — 可下载的完整安装包 / complete install bundle
+## 你会得到什么？ / What will you get?
 
-## 一键安装 / One-click install
+| 交付 / Deliverable | 内容 / What it contains |
+|---|---|
+| 9:16 模特图 / Model image | 从头到鞋的镜前自拍 / Head-to-toe mirror selfie |
+| 10 镜头分镜 / Storyboard | 同一人物、服装与场景 / Consistent person, outfit and room |
+| 10 秒动作表 / Action plan | 每镜时长、手位、构图与商品重点 / Timing, hands, framing and product focus |
+| Seedance 中文提示词 / Chinese prompt | 按实际附件对应参考角色 / Reference roles matched to actual attachments |
+| OmniFlash 英文提示词 / English prompt | 开头集中标注一次 @，正文简洁 / One reference block, concise timeline |
+| TikTok 文案 / Copy | Hook + TITLE + CAPTION + hashtags；不保证爆款 / No promise of virality |
 
-在 PowerShell 中运行：
+这是图片和视频提示词工作流，不是自动生成成片的承诺。视频生成需要另外使用支持的服务，并检查输出。  
+This is an image and video-prompt workflow—not a promise of automatic video delivery. Video generation is a separate step in a supported service.
 
-```powershell
-git clone https://github.com/pusatpakaiankime-bit/douyin-mirror-outfit-storyboard.git
-cd douyin-mirror-outfit-storyboard
-powershell -ExecutionPolicy Bypass -File .\install.ps1
-```
+## 一句话开始 / Start with one request
 
-重启 Codex 后使用。The installer copies both the skill and its required shared constraints into `%USERPROFILE%\.codex\skills`. Restart Codex afterward.
-
-## 手动安装 / Manual install
-
-将下面两个目录复制到 `%USERPROFILE%\.codex\skills\`，保持目录名不变：
-
-```text
-skills/douyin-mirror-outfit-storyboard
-skills/_shared
-```
-
-Copy both folders into `%USERPROFILE%\.codex\skills\`, preserving their names, then restart Codex.
-
-## 最简使用 / Quick start
-
-先上传商品图、成年模特图；背景图可选。然后发送：
+先上传商品图、成年模特图和背景图，并说明顺序。  
+Upload your product, adult-model and background images, and identify their order.
 
 ```text
 使用 $douyin-mirror-outfit-storyboard 完成完整流程。
-严格按照我上传的 @产品图 和 @模特图 生成；如果上传了 @背景图，也严格按照背景图。
-生成 9:16 全身镜前自拍模特图、10 镜头分镜图、10 秒中文动作表、Seedance 2.0 中文视频提示词和 OmniFlash 英文视频提示词。
-严格锁定商品与同一位成年模特；按照现代马来西亚女性时尚补齐缺失单品；默认不要包包。背景保持真实住宅感，允许轻微生活痕迹和自然不对称，不要样板房、豪宅展厅或过度完美的 AI 场景。
-```
-
-English command:
-
-```text
-Use $douyin-mirror-outfit-storyboard and complete the full workflow.
-Follow my uploaded @product image and @adult model image exactly; if an @background image is supplied, follow it as well.
-Create a 9:16 full-body mirror-selfie model image, a 10-shot storyboard, a 10-second Chinese action plan, a Seedance 2.0 Chinese video prompt, and an OmniFlash English video prompt.
-Strictly preserve the product and the same adult model identity. Complete missing items in contemporary Malaysian women’s fashion. Do not add a bag by default. Keep the background believable and lived-in, with mild everyday traces and natural asymmetry; avoid showroom-perfect or obviously AI-generated interiors.
-```
-
-## 仅生成视频提示词 / Video prompt only
-
-```text
-使用 $douyin-mirror-outfit-storyboard。只输出可直接复制到 Seedance 2.0 的完整中文视频提示词和负面提示词。严格按照 @产品图、@模特图 和已有首帧，保持同一人物、同一商品、同一穿搭；默认不要包包。
+图1是商品，图2是成年模特，图3是背景。
+严格保持商品细节、人物身份和场景一致。
+生成9:16模特图、10镜头分镜、10秒动作表、Seedance中文提示词、
+OmniFlash英文提示词和TikTok文案（Hook、TITLE、CAPTION、Hashtags）。
+OmniFlash开头集中标注一次@，后文不要重复。
+禁止添加包包、画面文字和水印。模特图检查通过后再生成分镜。
 ```
 
 ```text
-Use $douyin-mirror-outfit-storyboard. Output only a complete copy-ready OmniFlash English video prompt and negative prompt. Follow the uploaded @product image, @adult model image, and existing first frame exactly. Keep the same person, product, and styling. Do not add a bag by default.
+Use $douyin-mirror-outfit-storyboard for the complete workflow.
+Image 1 is the product, image 2 the adult model, and image 3 the background.
+Preserve product details, identity and the room.
+Create a 9:16 model image, 10-shot storyboard, 10-second action plan,
+Chinese Seedance prompt, English OmniFlash prompt, and TikTok copy
+with Hook, TITLE, CAPTION and hashtags.
+Mention each reference once at the start of the OmniFlash prompt.
+No added bags, on-image text or watermarks. Review the model image before storyboarding.
 ```
 
-## 图片参考优先级 / Reference priority
+## 图文导览 / Illustrated guide
 
-1. 商品图决定商品事实；不得擅自换色、改版型或删减细节。
-2. 成年模特图决定人物身份；不得换脸、改变肤色、年龄感或体型。
-3. 背景图只决定环境，不得被误写成服装或人物参考。
-4. 自动搭配只能补齐缺失单品，不得遮挡或改造主商品。
+<table><tr><td width="50%"><img src="examples/malaysian-modest-look-1.png" alt="Existing generated fashion style example 1"></td><td width="50%"><img src="examples/malaysian-modest-look-2.png" alt="Existing generated fashion style example 2"></td></tr><tr><td>风格示意 1 / Style illustration 1</td><td>风格示意 2 / Style illustration 2</td></tr></table>
 
-Product image controls product facts; adult model image controls identity; background controls environment only. Generated styling may fill missing pieces but must not alter or hide the hero product.
+以上为仓库既有生成示例，不是原始商品，也不是逐细节保真验证通过的证明。先学会[图像检查方法](docs/tutorial.md)，再把你自己的合格图片用于下一步。  
+These existing generated examples illustrate style, not source products or verified exact matches. Use the [review checklist](docs/tutorial.md) before reusing your own outputs.
 
-## 完整教程 / Full tutorial
+## 安装 / Install
 
-下载仓库后双击 [`docs/index.html`](docs/index.html)。页面内含华文/English 切换、安装步骤、图片上传说明、完整流程指令、单项生成指令、Seedance 2.0 与 OmniFlash 用法及常见问题。
+下载仓库 ZIP 并解压。把 `skills/douyin-mirror-outfit-storyboard` 和必需的 `skills/_shared` 放进你的 Codex skills 目录，保留相对结构。已有同名文件请先备份，尤其是其他技能也会使用的共用约束。  
+Download and extract the repository ZIP. Copy both skill folders into your Codex skills directory, keeping their relative structure. Back up existing files first, especially shared constraints used by other skills.
 
-After downloading, open [`docs/index.html`](docs/index.html) in any browser. It works offline and includes a Chinese/English language switch.
+[详细安装与升级 / Installation and updates](docs/quick-start.md) · [离线图文入口 / Offline visual guide](docs/index.html)
 
-## 示例 / Examples
+## 按你的目标阅读 / Find your next step
 
-以下图片仅作为生成风格示例；仓库不包含用户上传的原始商品、模特或背景图片。
+- [快速上手 / Quick start](docs/quick-start.md)：安装、上传、最简指令 / Install, upload and invoke.
+- [完整教程 / Tutorial](docs/tutorial.md)：参考优先级、搭配、质检、失败处理 / References, styling and review.
+- [流程图 / Workflow](docs/workflow.md)：从输入到交付 / Inputs to deliverables.
+- [提示词与动作表 / Prompts and timeline](docs/prompts.md)：可复制模板 / Copy-ready templates.
+- [TikTok 文案 / TikTok copy](docs/tiktok.md)：用户指定的 Hook 写法 / Hook-led format.
+- [更新记录 / Changelog](CHANGELOG.md)：每次更新有版本 / Every update is versioned.
 
-![Malaysian modest fashion example](examples/malaysian-modest-look-1.png)
-
-![Malaysian modest fashion example](examples/malaysian-modest-look-2.png)
-
-## 注意 / Notes
-
-- 人物参考必须是成年人。
-- 不要上传没有使用权的图片。
-- 生成模型仍可能产生误差，发布前请人工检查商品细节、人物一致性与端庄覆盖。
-- Use adult model references only, respect image rights, and review generated outputs before publishing.
+只使用你有权使用的素材；模特必须为成年人。本仓库不是 Seedance、OmniFlash 或 TikTok 官方教程，平台设置以你当前界面为准。  
+Use assets you have permission to use and adult models only. This is an independent workflow guide, not official platform documentation. Available controls depend on your current service.
